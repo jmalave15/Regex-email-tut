@@ -1,0 +1,48 @@
+# Regex Tutorial - Match an Email
+
+This tutorial will explain how to match emails using the expression `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`. This can be helpful when you'd like to validate emails using technologies and applications such as Node or MongoDB.
+
+## Summary
+
+A sequence of characters that defines a search pattern is a regular expression. This gets used to discover patterns within a string, find or replace characters within a string or used to validate input. The tutoriial will walk through the components of regex and how it applies to matching an email.
+
+## Table of Contents
+
+- [Anchors](#anchors)
+- [Quantifiers](#quantifiers)
+- [Character Classes](#character-classes)
+- [Grouping and Capturing](#grouping-and-capturing)
+- [Bracket Expressions](#bracket-expressions)
+- [Greedy and Lazy Match](#greedy-and-lazy-match)
+
+## Regex Components
+
+### Anchors
+
+The anchors that will be used in this regex expression for matching an email are `^ ` , which indicates the start of the string and `$` to indicate the string's end. (m), or multiline will not be enabled, so the regex will ultimately conclude at `$`.
+
+### Quantifiers
+
+Quantifiers used in this regex will include the `+` operator, which connects the user email name + email service + `.com`. A second quantifier for the regex is `{2,6}`. This enables a match range between 2-6 characters for the character set of `[a-z\.]`.
+
+### Character Classes
+
+Character class used this expression is `\d` and it matches single characters that range from 0-9. It only matches a single digit such as "3", but not "33".
+
+### Grouping and Capturing
+
+The first capturing group for this expression is `([a-z0-9_\.-]+)` that matches the user email name. The second capturing group is `([\da-z\.-]+)` which matches the email service. Last, but not least, the third capture group is `([a-z\.]{2,6})` to which captures the `.com`.
+
+### Bracket Expressions
+
+Bracked expressios for the email validation will include the character sets `[a-z0-9_\.-]`. This will match any letter of the alphabet (a-z) and is also case senstive. Furthermore, it matches characters numbered 0-9 and matches the characters "\_" , "-" , and "."; `[\da-z\.-]`, which also matches a single digit from 0-9, plus any character a-z (case senstive), and the characters "." and "-".; `[a-z\.]` matches any character a-z(case senstive) and the character ".".
+
+### Greedy and Lazy Match
+
+This also includes greedy matches. Since it includes the `+` Quantifier, it also matches multiple times as needed. Another greedy Quantifier used in this regex is `{}` when matching `{2,6}` for the capture group.
+
+## Author
+
+Learning code with ucf coding bootcamp and beyond
+Cool dude trying to learn what is not impossible
+Check out the my profile at https://github.com/jmalave15
